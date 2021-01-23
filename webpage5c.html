@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Images</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+
+    <script>
+        "use strict";
+        var path = "";
+         fetch("./5bhk.json")
+            .then(function(resp){
+                return resp.json();
+            })
+            .then(function(data){
+                var tempdata = '';
+                var i;
+                for(i=0;i<data.length;i++)
+                {
+               path = data[i].Image;
+               console.log(path);
+
+
+
+               tempdata = tempdata + " <li><img src=' " + path + " ' alt='' uk-cover></li> ";
+
+               }
+                document.getElementById('fecheddata').innerHTML=tempdata;
+              })
+    </script>
+
+</head>
+<body>
+
+<div class="uk-position-relative  uk-visible-toggle uk-dark" tabindex="-1"  uk-slideshow="autoplay: true">
+
+
+
+    <ul class="uk-slideshow-items" uk-height-viewport="min-height: 300" id="fecheddata">
+
+
+    </ul>
+
+
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+
+
+
+
+ <a href="./webpage4c.html">
+                    <div class="uk-inline  uk-margin-left   uk-position-bottom-left" >
+                        <img class="uk-margin-bottom" src="images/Rectangle 9.png" width="200" alt="">
+                             <div style="position:fixed; left:35px; bottom:10px;" class="uk-overlay  uk-position-bottom-left">
+                                 <h2   class="uk-text-center uk-light uk-text-bolder" >Back</h2>
+                             </div>
+                    </div>
+             </a>
+
+
+         <a href="./webpage2.html">
+                    <div class="uk-inline  uk-margin-left   uk-position-bottom-center">
+                        <img class="uk-margin-bottom" src="images/Rectangle 9.png" width="200" alt="">
+                             <div  style="position:fixed;  bottom:10px;" class="uk-overlay  uk-position-bottom-center">
+                                 <h2  class="uk-text-center uk-light uk-text-bolder">Home</h2>
+                             </div>
+                    </div>
+             </a>
+
+
+     <div class="uk-inline     uk-position-top-center">
+                        <img  class="uk-margin-top" src="images/Rectangle 50.png" width="650" alt="">
+          <div class=" uk-overlay uk-position-top-center  uk-width-1-6" >
+
+              <a href="./webpage6a.html">  <button  class="uk-button uk-margin-left uk-margin-right uk-text-large  uk-text-bolder uk-light uk-button-text">Videos</button></a>
+              <a href="./webpage7a.html">   <button  class="uk-button uk-margin-left uk-margin-right uk-text-large uk-text-bolder uk-light uk-button-text">3D Virtual Tour</button></a>
+		    <a href="./webpage8c.html">  <button  class="uk-button uk-margin-left uk-margin-right uk-text-large uk-text-bolder uk-light uk-button-text">Floor Plan</button></a>
+
+                    </div>
+     </div>
+
+
+</div>
+
+</body>
+</html>

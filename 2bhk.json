@@ -1,0 +1,20 @@
+[
+    {
+        "ID": "COO1",
+        "Name": "room1",
+        "Image": "./images2/room3.jpg"
+    },
+
+    {
+        "ID": "COO2",
+        "Name": "room2",
+        "Image": "./images2/room2.jpg"
+    },
+
+    {
+        "ID": "COO3",
+        "Name": "room3",
+        "Image": "./images2/room1.jpg"
+    }
+]
+

@@ -1,0 +1,29 @@
+[
+    {
+       
+        "Name": "room2",
+        "Image": "./images5/1.jpg"
+    },
+
+    {
+        
+        "Name": "room1",
+        "Image": "./images5/2.jpg"
+    },
+
+    {
+        
+        "Name": "room3",
+        "Image": "./images5/3.jpg"
+    },
+
+    {
+        
+        "Name": "room3",
+        "Image": "./images5/4.jpg"
+    }
+
+
+  
+]
+
