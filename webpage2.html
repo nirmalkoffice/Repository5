@@ -6,13 +6,59 @@
     <link rel="stylesheet" href="css/uikit.min.css" />
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
+
+    <style>
+
+
+</style>
+<script>
+var vid,  mutebtn, volumeslider;
+function intializePlayer(){
+    // Set object references
+    vid = document.getElementById("my_video");
+   
+    mutebtn = document.getElementById("mutebtn");
+    volumeslider = document.getElementById("volumeslider");
+    // Add event listeners
+    
+    mutebtn.addEventListener("click",vidmute,false);
+    volumeslider.addEventListener("change",setvolume,false);
+}
+window.onload = intializePlayer;
+
+
+function vidmute(){
+    if(vid.muted){
+        vid.muted = false;
+        mutebtn.innerHTML = "<img width='40' class='uk-border-circle' src='images/unmute.jpg'>";
+    } else {
+        vid.muted = true;
+        mutebtn.innerHTML = "<img width='40' class='uk-border-circle' src='images/mute1.png'>";
+    }
+}
+function setvolume(){
+    vid.volume = volumeslider.value / 100;
+}
+
+
+</script>
     <title>webpage2</title>
   </head>
   <body>
-  <div class="uk-background-cover  uk-height-viewport uk-panel uk-flex uk-flex-left ">
-      <video class="uk-height-viewport uk-width-1-1" src="images2/HomeVideo.mp4" loop  playsinline uk-video="autoplay: inview"></video>
+ <div id="video_player_box"   class="uk-background-cover  uk-height-viewport uk-panel uk-flex uk-flex-left ">
+  <video class=" uk-height-viewport uk-width-1-1" id="my_video"  loop playsinline uk-video="autoplay: inview">
+    <source src="images2/HomeVideo.mp4">
+  </video>
+  <div class=" uk-position-top-right" id="video_controls_bar">
+    
+    <button id="mutebtn"><img width="40" class="uk-border-circle" src="images/unmute.jpg"></button>
+    <input id="volumeslider" type="range" min="0" max="100" value="100" step="1">
+  </div>
 
-    <div >
+
+
+
+ <div >
              <a href="./index.html">
                     <div class="uk-inline  uk-margin-left   uk-position-bottom-left" >
                         <img class="uk-margin-bottom" src="images/Rectangle 9.png" width="200" alt="">
@@ -51,12 +97,7 @@
                  </div>
             </div>
         </a>
-
 </div>
-
-
-</div>
-
 
   </body>
 </html>
