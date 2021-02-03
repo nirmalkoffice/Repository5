@@ -8,3 +8,4 @@ sudo git pull
 
 
 sudo systemctl restart apache2.service
+ls
